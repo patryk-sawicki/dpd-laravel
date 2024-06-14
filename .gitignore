@@ -1,0 +1,9 @@
+/.idea/
+/composer.lock
+/composer.phar
+/vendor/
+/.env
+/.phpunit.result.cache
+/node_modules/
+/src/node_modules/
+/src/package-lock.json

@@ -1,0 +1,41 @@
+{
+  "name": "patryk-sawicki/dpd-laravel",
+  "description": "DPD API client for laravel.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Patryk Sawicki",
+      "email": "patryk@patryksawicki.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PatrykSawicki\\DpdApi\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PatrykSawicki\\DpdTests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "ext-json": "*",
+    "ext-simplexml": "*",
+    "laravel/framework": "^10.00"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "laravel/laravel": "^10.00 || ^11.00"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PatrykSawicki\\DpdApi\\app\\Providers\\DpdServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
