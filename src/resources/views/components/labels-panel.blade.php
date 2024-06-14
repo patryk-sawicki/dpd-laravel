@@ -28,9 +28,9 @@
                     <label for="dpd-weight">Waga (kg)</label>
                     <input type="number" name="dpd[parcels][weight]"
                            id="dpd-weight" placeholder="Waga (kg)"
-                           value=""
+                           value="{{ $weight ?? '' }}"
                            class="form-control"
-                           step="1"
+                           step="0.01"
                     >
                 </div>
 
@@ -39,7 +39,7 @@
                     <label for="dpd-sizeX">Rozmiar x (cm)</label>
                     <input type="number" name="dpd[parcels][sizeX]"
                            id="dpd-sizeX" placeholder="Rozmiar x (cm)"
-                           value=""
+                           value="{{ $sizeX ?? '' }}"
                            class="form-control"
                            step="1"
                     >
@@ -50,7 +50,7 @@
                     <label for="dpd-sizeY">Rozmiar y (cm)</label>
                     <input type="number" name="dpd[parcels][sizeY]"
                            id="dpd-sizeY" placeholder="Rozmiar y (cm)"
-                           value=""
+                           value="{{ $sizeY ?? '' }}"
                            class="form-control"
                            step="1"
                     >
@@ -61,7 +61,7 @@
                     <label for="dpd-sizeZ">Rozmiar z (cm)</label>
                     <input type="number" name="dpd[parcels][sizeZ]"
                            id="dpd-sizeZ" placeholder="Rozmiar z (cm)"
-                           value=""
+                           value="{{ $sizeZ ?? '' }}"
                            class="form-control"
                            step="1"
                     >

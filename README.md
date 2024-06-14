@@ -184,6 +184,10 @@ Add a panel for generating labels.
 
 ```php
 <x-dpd::labels-panel
+    :weight=""
+    :sizeX=""
+    :sizeY=""
+    :sizeZ=""
     :destination-code=""
     :receiverName=""
     :receiverPhone=""
