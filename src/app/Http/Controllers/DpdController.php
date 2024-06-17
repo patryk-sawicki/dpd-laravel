@@ -35,6 +35,16 @@ class DpdController extends Controller
         $waybillInput['pkgNumsGenerationPolicyV1'] = 'ALL_OR_NOTHING';
         $waybillInput['langCode'] = 'PL';
 
+        $this->removeEmptyData($waybillInput);
+
+        if (isset($waybillInput['openUMLFeV11']['packages']['receiver']['postalCode'])) {
+            $waybillInput['openUMLFeV11']['packages']['receiver']['postalCode'] = str_replace(
+                '-',
+                '',
+                $waybillInput['openUMLFeV11']['packages']['receiver']['postalCode']
+            );
+        }
+
         $waybill = $dpd->generateWaybillLabel()->generate($waybillInput);
 
         if ($waybill['Status'] !== 'OK') {
@@ -70,5 +80,18 @@ class DpdController extends Controller
 
         Storage::disk($disc)->put($dir . '/' . $file . '.pdf', $pdf);
         return Storage::disk($disc)->download($dir . '/' . $file . '.pdf');
+    }
+
+    public function removeEmptyData(array &$data)
+    {
+        foreach ($data as $key => &$value) {
+            if (is_array($value)) {
+                $this->removeEmptyData($value);
+            }
+
+            if (empty($value)) {
+                unset($data[$key]);
+            }
+        }
     }
 }

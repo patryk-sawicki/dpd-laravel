@@ -80,6 +80,32 @@
                            maxlength="30">
                 </div>
 
+                {{--Receiver address--}}
+                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 mb-10-px">
+                    <label for="dpd-receiver_address">Adres</label>
+                    <input type="text" name="dpd[receiver][address]" id="dpd-receiver_address" placeholder="Adres"
+                           value="{{ $receiverAddress ?? '' }}"
+                           class="form-control" maxlength="30">
+                </div>
+
+                {{--Receiver City--}}
+                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 mb-10-px">
+                    <label for="dpd-receiver_city">Miasto</label>
+                    <input type="text" name="dpd[receiver][city]" id="dpd-receiver_city"
+                           placeholder="Miasto"
+                           value="{{ $receiverCity ?? '' }}"
+                           class="form-control" maxlength="30">
+                </div>
+
+                {{--Receiver Post Code--}}
+                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 mb-10-px">
+                    <label for="dpd-receiver_post_code">Kod pocztowy</label>
+                    <input type="text" name="dpd[receiver][postalCode]" id="dpd-receiver_post_code"
+                           placeholder="Kod pocztowy"
+                           value="{{ $receiverPostCode ?? '' }}"
+                           class="form-control" maxlength="6">
+                </div>
+
                 {{--Phone Number--}}
                 <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 mb-10-px">
                     <label for="dpd-receiver_phone">Telefon</label>
