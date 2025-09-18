@@ -22,7 +22,7 @@
     "php": "^8.2",
     "ext-json": "*",
     "ext-simplexml": "*",
-    "laravel/framework": "^10.00"
+    "laravel/framework": "^10.00 || ^11.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5",
