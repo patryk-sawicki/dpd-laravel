@@ -29,7 +29,7 @@ class DpdController extends Controller
 
         $waybillInput['openUMLFeV11']['packages'] = $request->dpd;
         $waybillInput['openUMLFeV11']['packages']['payerType'] = 'THIRD_PARTY';
-        $waybillInput['openUMLFeV11']['packages']['thirdPartyFID'] = config('dpd.api_master_fid');
+        $waybillInput['openUMLFeV11']['packages']['thirdPartyFID'] = config('dpd.third_party_fid');
         $waybillInput['openUMLFeV11']['packages']['receiver']['countryCode'] = 'PL';
         $waybillInput['openUMLFeV11']['packages']['sender']['countryCode'] = 'PL';
         $waybillInput['pkgNumsGenerationPolicyV1'] = 'ALL_OR_NOTHING';

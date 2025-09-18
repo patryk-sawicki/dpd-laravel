@@ -1,10 +1,13 @@
 <?php
 
+$DPD_MASTER_FID = env('DPD_MASTER_FID', null);
+
 /*Configuration file for DPD API.*/
 return [
     'api_login' => env('DPD_LOGIN', null),
     'api_password' => env('DPD_PASSWORD', null),
-    'api_master_fid' => env('DPD_MASTER_FID', null),
+    'api_master_fid' => $DPD_MASTER_FID,
+    'third_party_fid' => env('DPD_THIRD_PARTY_FID', $DPD_MASTER_FID),
     'api_url' => env(
         'DPD_API_URL',
         'https://dpdservices.dpd.com.pl/DPDPackageObjServicesService/DPDPackageObjServices?WSDL'

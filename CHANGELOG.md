@@ -1,3 +1,6 @@
+* ### 0.1.4
+* Update DPD configuration to include third party FID
+
 * ### 0.1.3
 * labels-panel.blade – Added address parameters.
 
